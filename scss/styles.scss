@@ -19,14 +19,41 @@ i, p {
   font-weight: bold;
 }
 
+.header {
+  border-bottom: 1px solid #7A7B81;
+
+  :nth-child(2) {
+    margin-left: 10px;
+  }
+}
+
 ul {
   list-style: none;
   margin-top: 36px;
+  margin-bottom: 0;
   padding: 0;
 }
 
 li {
   position: relative;
+  background-color: $list-items-bg;
+  color: $list-items-font;
+  border-bottom: 1px solid #C9C9C9;
+
+  :nth-child(1) {
+    color: #ACA6A6;
+    padding-left: 13px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  :nth-child(2) {
+    padding-left: 17px;
+  }
+
+  :nth-child(3) {
+    border: 1px solid #C9C9C9;
+  }
 }
 
 .small-number {
@@ -39,6 +66,7 @@ li {
 
 .active {
   background-color: $heading-active-bg;
+  // background-color: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.25));
 
   i, p {
     color: $heading-active-font;
@@ -48,6 +76,10 @@ li {
     background-color: $heading-active-font;
     color: $heading-font;
   }
+}
+
+.header:hover {
+  @extend .active;
 }
 
 .not-active {
