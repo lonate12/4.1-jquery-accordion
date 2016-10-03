@@ -1,0 +1,67 @@
+/* Bootstrap Variables */
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/* Import Bootstrap */
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Colors
+$heading-active-bg: #ACD05E;
+$heading-active-font: #3E5706;
+$heading-bg: #595B60;
+$heading-font: #FFF;
+$heading-number-bg: #404247;
+$list-items-bg: #E5E5E5;
+$list-items-font: #797979;
+
+i, p {
+  display: inline-block;
+  padding-top: 7px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  margin-top: 36px;
+  padding: 0;
+}
+
+li {
+  position: relative;
+}
+
+.small-number {
+  padding: 1px 11px;
+  border-radius: 12px;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+}
+
+.active {
+  background-color: $heading-active-bg;
+
+  i, p {
+    color: $heading-active-font;
+  }
+
+  .small-number {
+    background-color: $heading-active-font;
+    color: $heading-font;
+  }
+}
+
+.not-active {
+  background-color: $heading-bg;
+
+  i, p {
+    color: $heading-font;
+  }
+
+  .small-number {
+    background-color: $heading-number-bg;
+  }
+}
+
+.active, .not-active {
+  position: relative;
+}
