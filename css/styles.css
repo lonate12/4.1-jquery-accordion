@@ -5856,15 +5856,23 @@ i, p {
   font-weight: bold; }
 
 .header {
-  border-bottom: 1px solid #7A7B81; }
-  .header :nth-child(2) {
-    margin-left: 10px; }
+  border-bottom: 1px solid #7A7B81;
+  position: relative;
+  background: linear-gradient(#595B60, #4C4E52);
+  padding: 0; }
+  .header i, .header p {
+    color: #FFF; }
+  .header i {
+    padding-left: 10px; }
+  .header .small-number {
+    background-color: #404247; }
 
 ul {
   list-style: none;
-  margin-top: 36px;
+  margin-top: 10px;
   margin-bottom: 0;
-  padding: 0; }
+  padding: 0;
+  display: none; }
 
 li {
   position: relative;
@@ -5889,21 +5897,14 @@ li {
   top: 7px; }
 
 .active, .header:hover {
-  background-color: #ACD05E; }
+  background: linear-gradient(#ACD05E, #6C901A); }
   .active i, .header:hover i, .active p, .header:hover p {
     color: #3E5706; }
+  .active li p, .header:hover li p, .active li .small-number, .header:hover li .small-number {
+    background-color: #E5E5E5;
+    color: #797979; }
   .active .small-number, .header:hover .small-number {
     background-color: #3E5706;
     color: #FFF; }
-
-.not-active {
-  background-color: #595B60; }
-  .not-active i, .not-active p {
-    color: #FFF; }
-  .not-active .small-number {
-    background-color: #404247; }
-
-.active, .header:hover, .not-active {
-  position: relative; }
 
 /*# sourceMappingURL=styles.css.map */
