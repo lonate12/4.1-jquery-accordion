@@ -21,17 +21,30 @@ i, p {
 
 .header {
   border-bottom: 1px solid #7A7B81;
+  position: relative;
+  // z-index: 1;
+  background: linear-gradient($heading-bg, #4C4E52);
+  padding: 0;
 
-  :nth-child(2) {
-    margin-left: 10px;
+  i, p {
+    color: $heading-font;
+  }
+
+  i {
+    padding-left: 10px;
+  }
+
+  .small-number {
+    background-color: $heading-number-bg;
   }
 }
 
 ul {
   list-style: none;
-  margin-top: 36px;
+  margin-top: 10px;
   margin-bottom: 0;
   padding: 0;
+  display: none;
 }
 
 li {
@@ -65,11 +78,15 @@ li {
 }
 
 .active {
-  background-color: $heading-active-bg;
-  // background-color: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.25));
+  background: linear-gradient($heading-active-bg, #6C901A);
 
   i, p {
     color: $heading-active-font;
+  }
+
+  li p, li .small-number {
+    background-color: $list-items-bg;
+    color: $list-items-font;
   }
 
   .small-number {
@@ -80,20 +97,4 @@ li {
 
 .header:hover {
   @extend .active;
-}
-
-.not-active {
-  background-color: $heading-bg;
-
-  i, p {
-    color: $heading-font;
-  }
-
-  .small-number {
-    background-color: $heading-number-bg;
-  }
-}
-
-.active, .not-active {
-  position: relative;
 }
